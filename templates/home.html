@@ -16,16 +16,18 @@
     </div>
     <div class="text-center">
         <h2>Open Positions</h2>
+    </div>    
     <p>
         {% for job in jobs %}
         <div>
             <h4>
                 {{ job['title'].title() }}
             </h4>
+            <div  class="text-secondary mb-4"> Location: {{ job['location'] }}</div>
+            
         </div>
         {% endfor %}
     </p>
-        </div>
         <div class="text-center">
             <button class="btn btn-primary btn-ig">Contact Us</button>
         <p class="mt-4">Copyright 2022, JP Corp</p>
