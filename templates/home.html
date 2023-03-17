@@ -15,8 +15,20 @@
         <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eveniet ullam animi cupiditate. Reiciendis nostrum quia unde accusamus aliquam nulla repellendus, pariatur quaerat magnam aperiam vel numquam quae, impedit ducimus!</p>
     </div>
     <div class="text-center">
-        <button class="btn btn-primary btn-ig">Contact Us</button>
-    <p class="mt-4">Copyright 2022, JP Corp</p>
+        <h2>Open Positions</h2>
+    <p>
+        {% for job in jobs %}
+        <div>
+            <h4>
+                {{ job['title'].title() }}
+            </h4>
         </div>
+        {% endfor %}
+    </p>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary btn-ig">Contact Us</button>
+        <p class="mt-4">Copyright 2022, JP Corp</p>
+    </div>
 </body>
 </html>
