@@ -19,15 +19,7 @@
     </div>    
     <p>
         {% for job in jobs %}
-        <div class="mb-4">
-            <h4 class="mb-0">
-                {{ job['title'].title() }}
-            </h4>
-            <div  class="text-secondary"> Location: {{ job['location'] }}</div>
-            {% if 'salary' in job %}
-            <div class="text-secondary">Salary: {{ job['salary'] }}</div>
-            {% endif %}
-        </div>
+          {% include 'jobitem.html' %}
         {% endfor %}
     </p>
         <div class="text-center">
